@@ -2,29 +2,26 @@
 
 body {
     margin: 0;
-    background-color: #E3DAC9;
+    background-color: #f1eafd;
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 30px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Nav Styles */
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    padding: 0 0 0 0;
-    background-color: #738290;
+    padding: 5px;
+    background-color: #3F2A56;
     font-weight: 700;
-    text-align: center;
     font-size: 28px;
 }
 
-nav p,
-nav a {
-    color: aliceblue;
+nav p {
+    color: white;
     margin: 0;
+    text-align: left;
 }
 
 nav a {
@@ -60,54 +57,55 @@ footer a:hover {
 
 /* Splash Section */
 .splash {
-    border: 0;
-}
-
-.splash section {
-
-    background-image: url('images\banner.png');
+    display:flex;
+    background-image: url('../images/banner.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
 }
 
 .splash h1 {
     margin: 0;
-    color: white;
+    padding: 15px;
+    color: #3F2A56;
     font-family: "Playwrite DE LA", serif;
     font-optical-sizing: auto;
     font-style: normal;
-}
-
-.splash img {
-    border-radius: 50%;
+    text-align: left;
 }
 
 .splash p {
     font-size: 32px;
     margin: 0;
-    text-align: center;
-    color: white;
+    padding: 15px;
+    text-align: left;
+    color: #3F2A56;
+}
+
+.splash img {
+    margin:0;
+    padding: 10px;
+    padding-top:40px;
 }
 
 /* Horizontal Rules */
 hr {
     margin: 0;
-    color: #635147;
-    border: 7px solid;
+    color: #3F2A56;
+    border: 2px solid;
 }
 
 /* Sections */
 section {
-    text-align: center;
+    text-align: left;
 }
 
-/* Section Headings */
-section h2 {
+/* Headings */
+.h2 {
     display: flex;
     justify-content: center;
-    color: #635147;
+    color: #3F2A56;
     font-family: "Arsenal SC", serif;
     font-weight: 700;
     font-style: normal;
@@ -124,6 +122,11 @@ section p {
     text-align: center;
 }
 
+.indent {
+  margin-left: 40px;
+  text-indent: -40px;
+}
+
 /* link styles */
 section a {
     text-decoration: none;
@@ -136,7 +139,7 @@ section a:hover {
 
 /* List Styles */
 ul {
-    list-style-type: circle;
+    list-style-type: none;
     list-style-position: inside;
 }
 
@@ -152,6 +155,31 @@ dl dd {
     margin: 0;
     grid-column-start: 2;
 }
+
+/* Skills Card */
+.skills-container {
+    display:grid;
+     grid-template-columns: repeat(2, 1fr);
+}
+
+.skills-card {
+    padding:10px;
+    box-shadow: 0 0 4px 0 rgba(63, 42, 86);
+    transition: 0.5s;
+}
+
+.skills-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    margin-right: 20px;
+}
+
+
 
 /* Project Section */
 .three-col {
