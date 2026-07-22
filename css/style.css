@@ -102,16 +102,16 @@ section {
 }
 
 /* Headings */
-section h2 {
+h2 {
     display: flex;
     justify-content: left;
     color: #3F2A56;
-    font-family: "Arsenal SC", serif;
+    font-family: "Markazi Text", serif;
     font-weight: 700;
-    font-style: normal;
+    font-style: bold;
     text-align: left;
-    font-size: 32px;
-    padding-left: 10px
+    font-size: 50px;
+    padding-left: 30px;
 }
 
 .h3 {
@@ -234,8 +234,10 @@ dl dd {
 }
 
 .experience-item {
-    padding: 20px 0;
-    border-bottom: 1px solid;
+    padding: 20px;
+    border: 1px solid;
+    margin-top: 10px;
+
 }
 
 .experience-item h3 {
@@ -260,7 +262,8 @@ dl dd {
 
 .experience-card {
     background-color: white;
-    width: 50%;
+    width: 75%;
+    margin-left: 50px;
 }
 
 
