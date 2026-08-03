@@ -25,13 +25,12 @@ nav p {
 }
 
 nav a {
-    color: aliceblue;
+    color: white;
     text-decoration: none;
 }
 
 nav a:hover {
-    transition: 0.3s;
-    color: #635147;
+    color:#f1eafd;
 }
 
 /* Footer Styles */
@@ -46,13 +45,14 @@ footer {
 }
 
 footer a {
-    color: #635147;
+    color: #3F2A56;
     text-decoration: none;
+    margin-left: 5px;
 }
 
 footer a:hover {
     transition: 0.3s;
-    color: aliceblue;
+    color: white;
 }
 
 /* Splash Section */
@@ -67,9 +67,8 @@ footer a:hover {
 
 .splash h1 {
     margin: 0;
-    padding: 15px;
     color: #3F2A56;
-    font-family: "Playwrite DE LA", serif;
+    font-family: "Markazi Text", serif;
     font-optical-sizing: auto;
     font-style: normal;
     text-align: left;
@@ -78,7 +77,7 @@ footer a:hover {
 .splash p {
     font-size: 32px;
     margin: 0;
-    padding: 15px;
+    padding-left: 15px;
     text-align: left;
     color: #3F2A56;
 }
@@ -87,6 +86,15 @@ footer a:hover {
     margin: 0;
     padding: 10px;
     padding-top: 40px;
+}
+
+.splash a {
+    color: #3F2A56;
+    text-decoration: none;
+}
+
+.splash a:hover {
+    color: white;
 }
 
 /* Horizontal Rules */
@@ -131,11 +139,11 @@ section p {
 /* link styles */
 section a {
     text-decoration: none;
-    color: #635147
+    color: black;
 }
 
 section a:hover {
-    color: aliceblue;
+    color:#f1eafd ;
 }
 
 /* List Styles */
@@ -270,21 +278,23 @@ dl dd {
 
 
 /* Project Section */
-.three-col {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    border: #635147;
-    gap: 10px;
-    margin: 20px;
+.carousel {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    overflow: hidden;
+    background-color: white;
+}
+
+.track {
+    display: flex;
+    transition: transform .5s ease;
 }
 
 .card {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4);
-    transition: 0.5s;
-    background-color: #ABAEAD;
-    border: #635147;
-    justify-content: center;
-    align-items: center;
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
 }
 
 .card li {
@@ -292,36 +302,64 @@ dl dd {
 }
 
 .card img {
-    width: 400px;
+    display: block;
+    width: auto;
     height: 300px;
-    border: #635147 solid;
+    margin-left: auto;
+    margin-right:auto;
+    border: black solid;
 }
 
 .card h3 {
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 32px;
+    text-align: center;
 }
 
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgb(0, 0, 0, 0.8);
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: rgba(69, 19, 110,.6);
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 100;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    background: rgba(69, 19, 110,.9);
+    transition: .5s ease;
 }
 
 /* Contact Page Styles */
 .one-col {
-    display: grid;
+    display: block;
     text-align: center;
-    border: 3px;
-    display: inline-block;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 form {
     margin: 0;
-    background-color: #E3DAC9;
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 30px;
     text-align: center;
+    color: black;
 }
 
 form input,
@@ -347,8 +385,8 @@ form button {
     font-family: "Markazi Text", serif;
     font-weight: 500;
     font-size: 30px;
-    background-color: #635147;
-    color: aliceblue;
+    background-color: white;
+    color: black;
     border: none;
     padding: 16px 32px;
     margin: 4px 2px;
@@ -357,10 +395,22 @@ form button {
 
 form button:hover {
     cursor: pointer;
-    background-color: aliceblue;
-    color: #635147;
-    transition-duration: 0.4s;
+    background: rgba(69, 19, 110,.3);
+    transition: .5s ease;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-header {
+    text-align: center;
+    font-size: 48px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contact-p {
+    text-align: center;
+    margin: 5px;
+    padding: 0px;
 }
 
 /* Thank You Page*/
