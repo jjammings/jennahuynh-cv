@@ -184,6 +184,7 @@ dl dd {
     padding: 0;
     margin: 0;
     gap: 10px;
+    text-align: center;
 }
 
 .skills-list-item {
